@@ -1910,3 +1910,34 @@ func main() {
 
 ```
 
+## 28.创建项目
+
+```go
+go mod init myproject//生成go.mod
+
+# 格式化整个项目
+go fmt ./...
+
+# 运行 Server
+go run ./server
+
+# 运行 Client
+go run ./client
+
+# 编译 Server
+go build ./server
+
+# 编译 Client
+go build ./client
+
+# 测试整个项目
+go test ./...  //要有server_test.go client_test.go文件，必须要以_test.go结尾，也可以go test ./server  go test ./client
+
+# 查看详细测试
+go test -v ./...
+
+# 整理依赖
+go mod tidy
+```
+
+**`go run` 用来实际运行程序，`go test` 用来自动验证程序，检查你的实现是否正确**
